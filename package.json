@@ -1,0 +1,21 @@
+{
+  "name": "fm-cccw-circle-field",
+  "version": "1.0.0",
+  "description": "",
+  "main": "sketch.js",
+  "scripts": {
+    "test": "eslint ."
+  },
+  "keywords": [],
+  "author": "Adam Shaylor <business@adamshaylor.com>",
+  "license": "ISC",
+  "dependencies": {
+    "apr-awaitify": "^3.0.3",
+    "canvas-sketch": "^0.2.0",
+    "canvas-sketch-util": "^1.6.2",
+    "get-pixels": "^3.3.2"
+  },
+  "devDependencies": {
+    "eslint": "^5.15.3"
+  }
+}

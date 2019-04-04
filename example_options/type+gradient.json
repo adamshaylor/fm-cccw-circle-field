@@ -1,0 +1,10 @@
+{
+  "mapPath": "./example_size_maps/type+gradient.png",
+  "largestCircleRadius": 10,
+  "smallestCircleRadius": 2,
+  "iterationCount": 8192,
+  "weightedRandomSampleSize": 8,
+  "fillStyle": "black",
+  "frameInterval": 0,
+  "collisionHandlerName": "shrinkOld"
+}

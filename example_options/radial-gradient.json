@@ -1,0 +1,10 @@
+{
+  "mapPath": "./example_size_maps/radial-gradient.png",
+  "largestCircleRadius": 32,
+  "smallestCircleRadius": 1,
+  "iterationCount": 8192,
+  "weightedRandomSampleSize": 2,
+  "fillStyle": "black",
+  "frameInterval": 0,
+  "collisionHandlerName": "newCircleLoses"
+}
