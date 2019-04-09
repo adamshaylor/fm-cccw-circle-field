@@ -39,7 +39,6 @@ const computeDistance = (circle1, circle2) => {
 }
 
 function* makeCircleIterator(sizeMapPixels) {
-  const outputPixelCount = settings.dimensions[0] * settings.dimensions[1];
   const circles = [];
 
   // Assume that the image is grayscale, in which case all the color channels
@@ -58,7 +57,7 @@ function* makeCircleIterator(sizeMapPixels) {
     });
   };
 
-  collisionHandlers = {
+  const collisionHandlers = {
     newCircleWins: (newCircle, oldCircles) => {
       oldCircles.forEach(oldCircle => {
         const oldCircleIndex = circles.indexOf(oldCircle);
@@ -104,7 +103,6 @@ function* makeCircleIterator(sizeMapPixels) {
         if (distance >= 0) return;
         const r = oldCircle.r + Math.floor(distance);
         if (r >= options.smallestCircleRadius) {
-          if (computeDistance({ ...oldCircle, r }, newCircle) < 0) debugger;
           oldCircle.r = r;
         }
         else {
@@ -112,7 +110,6 @@ function* makeCircleIterator(sizeMapPixels) {
           circles.splice(oldCircleIndex, 1);
         }
       });
-      if (circles.includes(newCircle) && findCollisions(newCircle).length) debugger;
     },
     noop: () => {}
   };
@@ -149,14 +146,18 @@ function* makeCircleIterator(sizeMapPixels) {
   const sketch = () => {
     return ({ context }) => {
       const circleIterations = makeCircleIterator(sizeMapPixels);
+      let lastCircles = [];
       const intervalId = window.setInterval(() => {
         const iteration = circleIterations.next();
         if (iteration.done) {
           window.clearInterval(intervalId);
+          // eslint-disable-next-line no-console
           console.log('Done.');
+          // eslint-disable-next-line no-console
+          console.log(lastCircles);
           return;
         }
-        const circles = iteration.value;
+        const circles = lastCircles = iteration.value;
         context.clearRect(0, 0, settings.dimensions[0], settings.dimensions[1]);
         context.fillStyle = options.fillStyle;
         circles.forEach(({ x, y, r }) => {

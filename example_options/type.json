@@ -2,8 +2,8 @@
   "mapPath": "./example_size_maps/type.png",
   "largestCircleRadius": 10,
   "smallestCircleRadius": 8,
-  "iterationCount": 8192,
-  "weightedRandomSampleSize": 32,
+  "iterationCount": 16384,
+  "weightedRandomSampleSize": 128,
   "fillStyle": "black",
   "frameInterval": 0,
   "collisionHandlerName": "shrinkAll"

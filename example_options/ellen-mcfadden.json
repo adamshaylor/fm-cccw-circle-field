@@ -1,10 +1,10 @@
 {
   "mapPath": "./example_size_maps/ellen-mcfadden.png",
-  "largestCircleRadius": 12,
+  "largestCircleRadius": 128,
   "smallestCircleRadius": 1,
-  "iterationCount": 8192,
+  "iterationCount": 16384,
   "weightedRandomSampleSize": 1,
   "fillStyle": "black",
   "frameInterval": 0,
-  "collisionHandlerName": "shrinkAll"
+  "collisionHandlerName": "newCircleLoses"
 }
