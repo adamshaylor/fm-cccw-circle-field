@@ -7,7 +7,7 @@ const getPixels = awaitify(require('get-pixels'));
  * Input
  */
 
-const options = require('./example_options/type+gradient.json');
+const options = require('./example_options/olivia-knapp.json');
 
 const settings = {
   dimensions: [ 2048, 2048 ]
