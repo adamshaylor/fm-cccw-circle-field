@@ -1,0 +1,10 @@
+{
+  "mapPath": "./example_size_maps/silver-dollar.png",
+  "largestCircleRadius": 5,
+  "smallestCircleRadius": 1,
+  "iterationCount": 16384,
+  "weightedRandomSampleSize": 32,
+  "fillStyle": "black",
+  "frameInterval": 0,
+  "collisionHandlerName": "shrinkOld"
+}

@@ -1,0 +1,10 @@
+{
+  "mapPath": "./example_size_maps/olivia-knapp.png",
+  "largestCircleRadius": 3,
+  "smallestCircleRadius": 1,
+  "iterationCount": 8192,
+  "weightedRandomSampleSize": 128,
+  "fillStyle": "black",
+  "frameInterval": 0,
+  "collisionHandlerName": "newCircleLoses"
+}
